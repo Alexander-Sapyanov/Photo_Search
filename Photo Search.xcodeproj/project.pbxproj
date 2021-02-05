@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		110A333A25CC250700EDC537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 110A333925CC250700EDC537 /* Assets.xcassets */; };
 		110A333D25CC250700EDC537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110A333B25CC250700EDC537 /* LaunchScreen.storyboard */; };
 		110A334625CC321000EDC537 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A334525CC321000EDC537 /* ImageCollectionViewCell.swift */; };
+		110A334D25CD2AA000EDC537 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110A334C25CD2AA000EDC537 /* Model.swift */; };
 		3E564F6977E21FAA4F612A84 /* Pods_Photo_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748442F7C82FA1CBA3FA2415 /* Pods_Photo_Search.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		110A333C25CC250700EDC537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		110A333E25CC250700EDC537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		110A334525CC321000EDC537 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		110A334C25CD2AA000EDC537 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		47C2228FB3A5986B894D0808 /* Pods-Photo Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photo Search.debug.xcconfig"; path = "Target Support Files/Pods-Photo Search/Pods-Photo Search.debug.xcconfig"; sourceTree = "<group>"; };
 		748442F7C82FA1CBA3FA2415 /* Pods_Photo_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photo_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5E1831A1CA3A922781EF1A /* Pods-Photo Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photo Search.release.xcconfig"; path = "Target Support Files/Pods-Photo Search/Pods-Photo Search.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,16 +67,41 @@
 		110A332F25CC250300EDC537 /* Photo Search */ = {
 			isa = PBXGroup;
 			children = (
+				110A335025CD2BE900EDC537 /* Model */,
+				110A334F25CD2BE100EDC537 /* View */,
+				110A335125CD2BEF00EDC537 /* Controller */,
 				110A333025CC250300EDC537 /* AppDelegate.swift */,
 				110A333225CC250300EDC537 /* SceneDelegate.swift */,
-				110A333425CC250300EDC537 /* ViewController.swift */,
 				110A333625CC250300EDC537 /* Main.storyboard */,
 				110A333925CC250700EDC537 /* Assets.xcassets */,
 				110A333B25CC250700EDC537 /* LaunchScreen.storyboard */,
 				110A333E25CC250700EDC537 /* Info.plist */,
-				110A334525CC321000EDC537 /* ImageCollectionViewCell.swift */,
 			);
 			path = "Photo Search";
+			sourceTree = "<group>";
+		};
+		110A334F25CD2BE100EDC537 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				110A334525CC321000EDC537 /* ImageCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		110A335025CD2BE900EDC537 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				110A334C25CD2AA000EDC537 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		110A335125CD2BEF00EDC537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				110A333425CC250300EDC537 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		933EC841D107EEEEDD841A95 /* Frameworks */ = {
@@ -91,7 +118,6 @@
 				47C2228FB3A5986B894D0808 /* Pods-Photo Search.debug.xcconfig */,
 				DF5E1831A1CA3A922781EF1A /* Pods-Photo Search.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110A334D25CD2AA000EDC537 /* Model.swift in Sources */,
 				110A333525CC250300EDC537 /* ViewController.swift in Sources */,
 				110A333125CC250300EDC537 /* AppDelegate.swift in Sources */,
 				110A334625CC321000EDC537 /* ImageCollectionViewCell.swift in Sources */,
