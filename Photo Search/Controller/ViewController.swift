@@ -53,7 +53,6 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
             results = []
             collectionView?.reloadData()
             fetchPhotos(query: text)
-
         }
     }
 
