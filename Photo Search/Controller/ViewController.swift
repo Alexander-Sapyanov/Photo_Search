@@ -12,7 +12,7 @@ import SDWebImage
 
 class ViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate{
     
-    private var results: [Result] = []
+    private var results: [Result?] = []
     private let searchbar = UISearchBar()
     private var collectionView: UICollectionView?
 
@@ -53,6 +53,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
             results = []
             collectionView?.reloadData()
             fetchPhotos(query: text)
+
         }
     }
 
@@ -82,7 +83,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let imageURLString = results[indexPath.row].urls.regular
+        let imageURLString = (results[indexPath.row]?.urls.regular)! 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell()}
         cell.configure(with: imageURLString)
         return cell
